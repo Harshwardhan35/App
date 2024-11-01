@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".register">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center">
+
+        <EditText
+            android:id="@+id/edit"
+            android:layout_width="260dp"
+            android:layout_height="74dp"
+            android:layout_marginLeft="0dp"
+            android:inputType="number"
+            android:hint="ENTER PHONE NUMBER"
+            android:textAlignment="center"/>
+    </LinearLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:columnCount="2"
+        android:rowCount="2"
+        android:orientation="horizontal"
+        android:alignmentMode="alignMargins">
+
+        <!-- Add Contact Button and Text -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal">
+
+            <ImageButton
+                android:id="@+id/add"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="20dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/contact"/>
+            <TextView
+                android:id="@+id/addText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ADD CONTACTS"
+                android:textColor="#E91E63"
+                android:layout_gravity="center_horizontal"/>
+        </LinearLayout>
+
+        <!-- Delete Contact Button and Text -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal">
+
+            <ImageButton
+                android:id="@+id/del"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="20dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/delete"/>
+            <TextView
+                android:id="@+id/delText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DELETE CONTACTS"
+                android:textColor="#E91E63"
+                android:layout_gravity="center_horizontal"/>
+        </LinearLayout>
+
+        <!-- View Contact Button and Text -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal">
+
+            <ImageButton
+                android:id="@+id/view"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="20dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/view"/>
+            <TextView
+                android:id="@+id/viewText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="VIEW CONTACTS"
+                android:textColor="#E91E63"
+                android:layout_gravity="center_horizontal"/>
+        </LinearLayout>
+
+        <!-- Clear Button and Text -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal">
+
+            <ImageButton
+                android:id="@+id/clear"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="20dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/clear"/>
+            <TextView
+                android:id="@+id/clearText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CLEAR"
+                android:textColor="#E91E63"
+                android:layout_gravity="center_horizontal"/>
+        </LinearLayout>
+
+    </GridLayout>
+
+    <!-- ListView for displaying contact list -->
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:divider="#E91E63"
+        android:dividerHeight="1dp"
+        android:padding="10dp"/>
+
+</LinearLayout>
